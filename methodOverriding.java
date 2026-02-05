@@ -28,30 +28,67 @@ class FighterPlane extends Plane{
 		System.out.println("FighterPlane is flying in higher height");
 	}
 }
-
+class Travel{
+	void typesOfPlane(Plane ref) {
+		ref.takeOff();
+		ref.fly();
+		ref.land();
+	}
+}
 
 public class OverridingPolymorphism {
 
 	public static void main(String[] args) {
-		Plane p = new Plane();
-		p.takeOff();
-		p.fly();
-		p.land();
+		//tight coupling
+//		Plane p = new Plane();
+//		p.takeOff();
+//		p.fly();
+//		p.land();
+//		
+//		CargoPlane cp = new CargoPlane();
+//		cp.takeOff();
+//		cp.fly();
+//		cp.land();
+//		
+//		PassengerPlane pp = new PassengerPlane();
+//		pp.takeOff();
+//		pp.fly();
+//		pp.land();
+//		
+//		FighterPlane fp = new FighterPlane();
+//		fp.takeOff();
+//		fp.fly();
+//		fp.land();
+		
+		
+		//loose coupling
+//		CargoPlane cp = new CargoPlane();
+//		PassengerPlane pp = new PassengerPlane();
+//		FighterPlane fp = new FighterPlane();
+//		Plane ref;
+//		ref=cp;
+//		ref.takeOff();
+//		ref.fly();
+//		ref.land();
+//		
+//		ref=pp;
+//		ref.takeOff();
+//		ref.fly();
+//		ref.land();
+//		
+//		ref=fp;
+//		ref.takeOff();
+//		ref.fly();
+//		ref.land();
 		
 		CargoPlane cp = new CargoPlane();
-		cp.takeOff();
-		cp.fly();
-		cp.land();
-		
 		PassengerPlane pp = new PassengerPlane();
-		pp.takeOff();
-		pp.fly();
-		pp.land();
-		
 		FighterPlane fp = new FighterPlane();
-		fp.takeOff();
-		fp.fly();
-		fp.land();
+		
+		Travel t = new Travel();
+		t.typesOfPlane(cp);
+		t.typesOfPlane(pp);
+		t.typesOfPlane(fp);
 
 	}
 
@@ -60,24 +97,11 @@ public class OverridingPolymorphism {
 
 /*
 
-homework
+
 Vehicle class
 -> move method
 -> wheels method
 -> travelling mode method (land,water,air)
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
