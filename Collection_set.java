@@ -41,6 +41,17 @@ public class SetTypes {
 		s.add(13);
 		s.add(12);
 		
+		/*if you are using object type data - treeset return 
+		some error because it don't have any order to sort*/
+		
+		HashSet<Object> l = new HashSet<Object>();
+		l.add(10);
+		l.add("hi");
+		l.add(10.9);
+		l.add('m');
+		l.add(true);
+		System.out.println(l);
+		
 		for(int i : s) {
 			System.out.println(i);
 		}
