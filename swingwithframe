@@ -1,0 +1,77 @@
+package SwingProgram;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class loginpage {
+
+	static JFrame frame;
+	static JLabel name;
+	static JTextField namedata;
+	static JLabel password;
+	static JPasswordField passworddata;
+	static JButton login;
+	static JButton register;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame f = new JFrame("Login Page");
+		f.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Live Wire\\eclipse-workspace\\Mounika\\src\\SwingProgram\\bg.jpg")));
+		f.setSize(1500,900);
+		f.setLayout(null);
+//		f.setVisible(true);
+		
+		JLabel l1 = new JLabel("Welcome to our page");
+		l1.setBounds(500, 10, 500, 100);
+		l1.setFont(new Font("Calibri",Font.HANGING_BASELINE,40));
+		l1.setForeground(Color.white);
+		f.add(l1);
+		
+		name = new JLabel("Username");
+        name.setBounds(550,220,200,100);
+        name.setFont(new Font("Calibri", Font.HANGING_BASELINE, 20));
+        name.setForeground(Color.WHITE);
+        f.add(name);
+        
+        namedata = new JTextField();
+        namedata.setBounds(550,280,250,40);
+        namedata.setFont(new Font("Calibri", Font.HANGING_BASELINE, 25));
+        namedata.setForeground(Color.black);
+        f.add(namedata);
+        
+        password = new JLabel("Password");
+        password.setBounds(550,340,200,100);
+        password.setFont(new Font("Calibri", Font.HANGING_BASELINE, 20));
+        password.setForeground(Color.WHITE);
+        f.add(password);
+        
+        passworddata = new JPasswordField();
+        passworddata.setBounds(550,400,250,40);
+        passworddata.setFont(new Font("Calibri", Font.HANGING_BASELINE, 25));
+        passworddata.setForeground(Color.black);
+        f.add(passworddata);
+        
+        login=new JButton("Login");
+        login.setBounds(550, 500, 250, 40);
+        login.setForeground(Color.white);
+        login.setBackground(Color.decode("#4B0076"));
+        login.setFont(new Font("sans serif",Font.ITALIC,20));
+		f.add(login);
+//		login.addActionListener(this);
+		
+		register=new JButton("Don't have an account ? click here for Register");
+		register.setBounds(530, 550, 300, 30);
+		register.setContentAreaFilled(false);
+		register.setOpaque(false);
+		register.setBorderPainted(false);
+		register.setFocusPainted(false);
+		register.setForeground(Color.WHITE);
+		register.setFont(new Font("sans serif",Font.ITALIC,10));
+		f.add(register);
+//		register.addActionListener(this);
+
+        f.setVisible(true);
+
+	}
+
+}
